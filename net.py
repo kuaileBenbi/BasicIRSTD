@@ -52,6 +52,16 @@ class Net(nn.Module):
             self.model = RDIAN()
         elif model_name == 'ResUNet':
             self.model = ResUNet()
+        elif model_name in ('CompareSPP', 'SPP'):
+            self.model = CompareSPP()
+        elif model_name in ('CompareFPN', 'FPN'):
+            self.model = CompareFPN()
+        elif model_name in ('ComparePANet', 'PANet'):
+            self.model = ComparePANet()
+        elif model_name == 'CompareACM':
+            self.model = CompareACM()
+        else:
+            raise ValueError('Unknown model_name: {}'.format(model_name))
         
     def forward(self, img):
         return self.model(img)

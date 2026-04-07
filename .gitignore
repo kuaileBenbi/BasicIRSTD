@@ -1,0 +1,55 @@
+# Editor / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.coverage
+.coverage.*
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Packaging / build
+build/
+dist/
+.eggs/
+*.egg-info/
+pip-wheel-metadata/
+
+# BasicIRSTD runtime outputs
+log/
+results/
+params_*.txt
+eval_*.txt
+
+# Subproject training outputs
+result/
+resultmydata/
+BasicIRSTD/model/ISTDU-Net-main/save_pth/
+
+# DCNv2 compiled artifacts
+model/ISNet/DCNv2/DCN/build/
+model/ISNet/DCNv2/DCN/**/*.pyd
+model/ISNet/DCNv2/DCN/**/*.so
+
+datasets/
+
+

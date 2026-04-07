@@ -8,3 +8,7 @@ from model.UIUNet.model_UIUNet import UIUNET as UIUNet
 from model.ISTDUNet.model_ISTDUNet import ISTDU_Net as ISTDU_Net
 from model.RDIAN.model_RDIAN import RDIAN as RDIAN
 from model.ResUNet.model_ResUNet import ResUNet as ResUNet
+from model.NeckCompare.model_NeckCompare import CompareACM as CompareACM
+from model.NeckCompare.model_NeckCompare import CompareFPN as CompareFPN
+from model.NeckCompare.model_NeckCompare import ComparePANet as ComparePANet
+from model.NeckCompare.model_NeckCompare import CompareSPP as CompareSPP
