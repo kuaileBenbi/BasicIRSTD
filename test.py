@@ -1,4 +1,5 @@
 import argparse
+import torch
 from torch.autograd import Variable
 from torch.utils.data import DataLoader
 from net import Net
@@ -27,6 +28,12 @@ parser.add_argument("--save_img", default=True, type=bool, help="save image of o
 parser.add_argument("--save_img_dir", type=str, default='./results/', help="path of saved image")
 parser.add_argument("--save_log", type=str, default='./log/', help="path of saved .pth")
 parser.add_argument("--threshold", type=float, default=0.5)
+parser.add_argument(
+    "--device",
+    type=str,
+    default="auto",
+    help="Test device: 'auto', 'cpu', or a CUDA device such as 'cuda:0'",
+)
 
 global opt
 opt = parser.parse_args()
@@ -35,24 +42,42 @@ if opt.img_norm_cfg_mean != None and opt.img_norm_cfg_std != None:
   opt.img_norm_cfg = dict()
   opt.img_norm_cfg['mean'] = opt.img_norm_cfg_mean
   opt.img_norm_cfg['std'] = opt.img_norm_cfg_std
+
+
+def resolve_device(device_arg):
+    if device_arg in (None, "auto"):
+        if torch.cuda.is_available():
+            return torch.device("cuda")
+        return torch.device("cpu")
+
+    device = torch.device(device_arg)
+    if device.type == "cuda" and not torch.cuda.is_available():
+        raise RuntimeError(
+            "CUDA was requested via --device={}, but the current PyTorch build has no CUDA support. "
+            "Install a CUDA-enabled PyTorch build or run with --device cpu.".format(device_arg)
+        )
+    return device
+
+
+opt.device = resolve_device(opt.device)
+print("Using device: {}".format(opt.device))
   
 def test(): 
     test_set = TestSetLoader(opt.dataset_dir, opt.train_dataset_name, opt.test_dataset_name, opt.img_norm_cfg)
     test_loader = DataLoader(dataset=test_set, num_workers=1, batch_size=1, shuffle=False)
     
-    net = Net(model_name=opt.model_name, mode='test').cuda()
+    net = Net(model_name=opt.model_name, mode='test').to(opt.device)
     try:
-        net.load_state_dict(torch.load(opt.pth_dir)['state_dict'])
+        net.load_state_dict(torch.load(opt.pth_dir, map_location=opt.device)['state_dict'])
     except:
-        device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-        net.load_state_dict(torch.load(opt.pth_dir, map_location=device)['state_dict'])
+        net.load_state_dict(torch.load(opt.pth_dir, map_location=opt.device)['state_dict'])
     net.eval()
     
     eval_mIoU = mIoU() 
     eval_PD_FA = PD_FA()
     with torch.no_grad():
         for idx_iter, (img, gt_mask, size, img_dir) in enumerate(test_loader):
-            img = Variable(img).cuda()
+            img = Variable(img).to(opt.device)
             pred = net.forward(img)
             pred = pred[:,:,:size[0],:size[1]]
             gt_mask = gt_mask[:,:,:size[0],:size[1]]
