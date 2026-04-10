@@ -1,0 +1,1748 @@
+{
+  "meta": {
+    "schema_version": "1.0.0",
+    "source_repo": "https://github.com/kuaileBenbi/BasicIRSTD",
+    "source_commit": "2530e8fc96b95b9a29e925f927fd6111972440b3",
+    "generated_at": "2026-04-10T06:51:33Z",
+    "task_scope": [
+      "single-frame"
+    ],
+    "notes": "Metrics are copied from the Benchmark table in README.md. The miou and pd values are normalized to the 0-1 range, while fa keeps the original table scale. Empty paper/code fields mean the README table did not provide them."
+  },
+  "datasets": [
+    {
+      "id": "sirst_v1",
+      "name": "SIRST-v1",
+      "task": "single-frame",
+      "description": "Single-frame infrared small target detection dataset used in the BasicIRSTD benchmark.",
+      "default_metrics": [
+        "miou",
+        "pd",
+        "fa"
+      ],
+      "curve_metrics": [],
+      "paper_link": "https://arxiv.org/pdf/2009.14530.pdf"
+    },
+    {
+      "id": "nudt_sirst",
+      "name": "NUDT-SIRST",
+      "task": "single-frame",
+      "description": "Single-frame infrared small target detection dataset used in the BasicIRSTD benchmark.",
+      "default_metrics": [
+        "miou",
+        "pd",
+        "fa"
+      ],
+      "curve_metrics": [],
+      "paper_link": "https://ieeexplore.ieee.org/abstract/document/9864119"
+    },
+    {
+      "id": "irstd_1k",
+      "name": "IRSTD-1K",
+      "task": "single-frame",
+      "description": "Single-frame infrared small target detection dataset used in the BasicIRSTD benchmark.",
+      "default_metrics": [
+        "miou",
+        "pd",
+        "fa"
+      ],
+      "curve_metrics": [],
+      "paper_link": "https://ieeexplore.ieee.org/document/9880295"
+    }
+  ],
+  "methods": [
+    {
+      "id": "top_hat",
+      "name": "Top-Hat",
+      "family": "traditional",
+      "paper_name": "Top-Hat",
+      "paper_link": "",
+      "code_link": "",
+      "venue": null,
+      "year": null,
+      "tags": [
+        "classical",
+        "single-frame"
+      ]
+    },
+    {
+      "id": "max_median",
+      "name": "Max-Median",
+      "family": "traditional",
+      "paper_name": "Max-Median",
+      "paper_link": "",
+      "code_link": "",
+      "venue": null,
+      "year": null,
+      "tags": [
+        "classical",
+        "single-frame"
+      ]
+    },
+    {
+      "id": "rlcm",
+      "name": "RLCM",
+      "family": "traditional",
+      "paper_name": "RLCM",
+      "paper_link": "",
+      "code_link": "",
+      "venue": null,
+      "year": null,
+      "tags": [
+        "classical",
+        "single-frame"
+      ]
+    },
+    {
+      "id": "wslcm",
+      "name": "WSLCM",
+      "family": "traditional",
+      "paper_name": "WSLCM",
+      "paper_link": "",
+      "code_link": "",
+      "venue": null,
+      "year": null,
+      "tags": [
+        "classical",
+        "single-frame"
+      ]
+    },
+    {
+      "id": "tllcm",
+      "name": "TLLCM",
+      "family": "traditional",
+      "paper_name": "TLLCM",
+      "paper_link": "",
+      "code_link": "",
+      "venue": null,
+      "year": null,
+      "tags": [
+        "classical",
+        "single-frame"
+      ]
+    },
+    {
+      "id": "mslcm",
+      "name": "MSLCM",
+      "family": "traditional",
+      "paper_name": "MSLCM",
+      "paper_link": "",
+      "code_link": "",
+      "venue": null,
+      "year": null,
+      "tags": [
+        "classical",
+        "single-frame"
+      ]
+    },
+    {
+      "id": "mspcm",
+      "name": "MSPCM",
+      "family": "traditional",
+      "paper_name": "MSPCM",
+      "paper_link": "",
+      "code_link": "",
+      "venue": null,
+      "year": null,
+      "tags": [
+        "classical",
+        "single-frame"
+      ]
+    },
+    {
+      "id": "ipi",
+      "name": "IPI",
+      "family": "traditional",
+      "paper_name": "IPI",
+      "paper_link": "",
+      "code_link": "",
+      "venue": null,
+      "year": null,
+      "tags": [
+        "classical",
+        "single-frame"
+      ]
+    },
+    {
+      "id": "nram",
+      "name": "NRAM",
+      "family": "traditional",
+      "paper_name": "NRAM",
+      "paper_link": "",
+      "code_link": "",
+      "venue": null,
+      "year": null,
+      "tags": [
+        "classical",
+        "single-frame"
+      ]
+    },
+    {
+      "id": "ript",
+      "name": "RIPT",
+      "family": "traditional",
+      "paper_name": "RIPT",
+      "paper_link": "",
+      "code_link": "",
+      "venue": null,
+      "year": null,
+      "tags": [
+        "classical",
+        "single-frame"
+      ]
+    },
+    {
+      "id": "pstnn",
+      "name": "PSTNN",
+      "family": "traditional",
+      "paper_name": "PSTNN",
+      "paper_link": "",
+      "code_link": "",
+      "venue": null,
+      "year": null,
+      "tags": [
+        "classical",
+        "single-frame"
+      ]
+    },
+    {
+      "id": "mslstipt",
+      "name": "MSLSTIPT",
+      "family": "traditional",
+      "paper_name": "MSLSTIPT",
+      "paper_link": "",
+      "code_link": "",
+      "venue": null,
+      "year": null,
+      "tags": [
+        "classical",
+        "single-frame"
+      ]
+    },
+    {
+      "id": "acm",
+      "name": "ACM",
+      "family": "deep-learning",
+      "paper_name": "ACM",
+      "paper_link": "",
+      "code_link": "https://github.com/YimianDai/open-acm",
+      "venue": null,
+      "year": null,
+      "tags": [
+        "cnn",
+        "single-frame"
+      ]
+    },
+    {
+      "id": "alcnet",
+      "name": "ALCNet",
+      "family": "deep-learning",
+      "paper_name": "ALCNet",
+      "paper_link": "",
+      "code_link": "https://github.com/YimianDai/open-alcnet",
+      "venue": null,
+      "year": null,
+      "tags": [
+        "cnn",
+        "single-frame"
+      ]
+    },
+    {
+      "id": "isnet",
+      "name": "ISNet",
+      "family": "deep-learning",
+      "paper_name": "ISNet",
+      "paper_link": "",
+      "code_link": "https://github.com/RuiZhang97/ISNet",
+      "venue": null,
+      "year": null,
+      "tags": [
+        "cnn",
+        "single-frame"
+      ]
+    },
+    {
+      "id": "rdian",
+      "name": "RDIAN",
+      "family": "deep-learning",
+      "paper_name": "RDIAN",
+      "paper_link": "",
+      "code_link": "https://github.com/sun11999/RDIAN",
+      "venue": null,
+      "year": null,
+      "tags": [
+        "cnn",
+        "single-frame"
+      ]
+    },
+    {
+      "id": "dna_net",
+      "name": "DNA-Net",
+      "family": "deep-learning",
+      "paper_name": "DNA-Net",
+      "paper_link": "",
+      "code_link": "https://github.com/YeRen123455/Infrared-Small-Target-Detection",
+      "venue": null,
+      "year": null,
+      "tags": [
+        "cnn",
+        "single-frame"
+      ]
+    },
+    {
+      "id": "istdu_net",
+      "name": "ISTDU-Net",
+      "family": "deep-learning",
+      "paper_name": "ISTDU-Net",
+      "paper_link": "",
+      "code_link": "https://github.com/zhanglw882/ISTDU-Net",
+      "venue": null,
+      "year": null,
+      "tags": [
+        "cnn",
+        "single-frame"
+      ]
+    },
+    {
+      "id": "uiu_net",
+      "name": "UIU-Net",
+      "family": "deep-learning",
+      "paper_name": "UIU-Net",
+      "paper_link": "",
+      "code_link": "https://github.com/danfenghong/IEEE_TIP_UIU-Net",
+      "venue": null,
+      "year": null,
+      "tags": [
+        "cnn",
+        "single-frame"
+      ]
+    }
+  ],
+  "results": [
+    {
+      "dataset_id": "sirst_v1",
+      "method_id": "top_hat",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.07142,
+        "pd": 0.79841,
+        "fa": 1012.003,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 17,
+        "pd": 12,
+        "fa": 17
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "sirst_v1",
+      "method_id": "max_median",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.01168,
+        "pd": 0.30196,
+        "fa": 55.332,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 18,
+        "pd": 18,
+        "fa": 13
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "sirst_v1",
+      "method_id": "rlcm",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.21022,
+        "pd": 0.80612,
+        "fa": 199.154,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 10,
+        "pd": 11,
+        "fa": 16
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "sirst_v1",
+      "method_id": "wslcm",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.010209999999999999,
+        "pd": 0.80987,
+        "fa": 45846.164,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 19,
+        "pd": 10,
+        "fa": 19
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "sirst_v1",
+      "method_id": "tllcm",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.11034000000000001,
+        "pd": 0.7947299999999999,
+        "fa": 7.268,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 15,
+        "pd": 13,
+        "fa": 1
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "sirst_v1",
+      "method_id": "mslcm",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.11557,
+        "pd": 0.7833199999999999,
+        "fa": 8.374,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 13,
+        "pd": 15,
+        "fa": 2
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "sirst_v1",
+      "method_id": "mspcm",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.12836999999999998,
+        "pd": 0.8327100000000001,
+        "fa": 17.773,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 11,
+        "pd": 8,
+        "fa": 6
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "sirst_v1",
+      "method_id": "ipi",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.25673999999999997,
+        "pd": 0.85551,
+        "fa": 11.47,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 8,
+        "pd": 7,
+        "fa": 4
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "sirst_v1",
+      "method_id": "nram",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.12164,
+        "pd": 0.74523,
+        "fa": 13.852,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 12,
+        "pd": 17,
+        "fa": 5
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "sirst_v1",
+      "method_id": "ript",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.11048,
+        "pd": 0.79077,
+        "fa": 22.612,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 14,
+        "pd": 14,
+        "fa": 7
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "sirst_v1",
+      "method_id": "pstnn",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.22401,
+        "pd": 0.7795300000000001,
+        "fa": 29.109,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 9,
+        "pd": 16,
+        "fa": 9
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "sirst_v1",
+      "method_id": "mslstipt",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.10302,
+        "pd": 0.82128,
+        "fa": 1131.002,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 16,
+        "pd": 9,
+        "fa": 18
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "sirst_v1",
+      "method_id": "acm",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.6944,
+        "pd": 0.92015,
+        "fa": 22.707,
+        "params_m": 0.398,
+        "flops_g": 0.402
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 6,
+        "pd": 5,
+        "fa": 8
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "sirst_v1",
+      "method_id": "alcnet",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.61047,
+        "pd": 0.87072,
+        "fa": 55.978,
+        "params_m": 0.427,
+        "flops_g": 0.378
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 7,
+        "pd": 6,
+        "fa": 14
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "sirst_v1",
+      "method_id": "isnet",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.70491,
+        "pd": 0.95057,
+        "fa": 67.983,
+        "params_m": 0.966,
+        "flops_g": 30.618
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 5,
+        "pd": 2,
+        "fa": 15
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "sirst_v1",
+      "method_id": "rdian",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.7073699999999999,
+        "pd": 0.95057,
+        "fa": 48.158,
+        "params_m": 0.217,
+        "flops_g": 3.718
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 4,
+        "pd": 2,
+        "fa": 12
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "sirst_v1",
+      "method_id": "dna_net",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.74815,
+        "pd": 0.93536,
+        "fa": 38.279,
+        "params_m": 4.697,
+        "flops_g": 14.261
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 3,
+        "pd": 3,
+        "fa": 10
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "sirst_v1",
+      "method_id": "istdu_net",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.75928,
+        "pd": 0.96198,
+        "fa": 38.897,
+        "params_m": 2.752,
+        "flops_g": 7.944
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 2,
+        "pd": 1,
+        "fa": 11
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "sirst_v1",
+      "method_id": "uiu_net",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.77531,
+        "pd": 0.9239499999999999,
+        "fa": 9.33,
+        "params_m": 50.54,
+        "flops_g": 54.426
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 1,
+        "pd": 4,
+        "fa": 3
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "nudt_sirst",
+      "method_id": "top_hat",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.20724,
+        "pd": 0.78408,
+        "fa": 166.704,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 9,
+        "pd": 8,
+        "fa": 17
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "nudt_sirst",
+      "method_id": "max_median",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.04201,
+        "pd": 0.5841299999999999,
+        "fa": 36.888,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 18,
+        "pd": 14,
+        "fa": 10
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "nudt_sirst",
+      "method_id": "rlcm",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.15139,
+        "pd": 0.66348,
+        "fa": 162.996,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 11,
+        "pd": 11,
+        "fa": 16
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "nudt_sirst",
+      "method_id": "wslcm",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.00848,
+        "pd": 0.74574,
+        "fa": 52391.633,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 19,
+        "pd": 9,
+        "fa": 19
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "nudt_sirst",
+      "method_id": "tllcm",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.07059,
+        "pd": 0.62014,
+        "fa": 46.118,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 14,
+        "pd": 13,
+        "fa": 13
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "nudt_sirst",
+      "method_id": "mslcm",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.06646,
+        "pd": 0.5682699999999999,
+        "fa": 25.619,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 16,
+        "pd": 15,
+        "fa": 7
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "nudt_sirst",
+      "method_id": "mspcm",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.05859,
+        "pd": 0.55866,
+        "fa": 115.961,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 17,
+        "pd": 17,
+        "fa": 15
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "nudt_sirst",
+      "method_id": "ipi",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.17758,
+        "pd": 0.7448600000000001,
+        "fa": 41.23,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 10,
+        "pd": 10,
+        "fa": 11
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "nudt_sirst",
+      "method_id": "nram",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.06931,
+        "pd": 0.56403,
+        "fa": 19.267,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 15,
+        "pd": 16,
+        "fa": 6
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "nudt_sirst",
+      "method_id": "ript",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.29441,
+        "pd": 0.9185,
+        "fa": 344.303,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 8,
+        "pd": 7,
+        "fa": 18
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "nudt_sirst",
+      "method_id": "pstnn",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.14848,
+        "pd": 0.66132,
+        "fa": 44.17,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 12,
+        "pd": 12,
+        "fa": 12
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "nudt_sirst",
+      "method_id": "mslstipt",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.08341,
+        "pd": 0.47399,
+        "fa": 88.102,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 13,
+        "pd": 18,
+        "fa": 14
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "nudt_sirst",
+      "method_id": "acm",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.6485500000000001,
+        "pd": 0.9672,
+        "fa": 28.587,
+        "params_m": 0.398,
+        "flops_g": 0.402
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 6,
+        "pd": 6,
+        "fa": 8
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "nudt_sirst",
+      "method_id": "alcnet",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.61131,
+        "pd": 0.97249,
+        "fa": 29.093,
+        "params_m": 0.427,
+        "flops_g": 0.378
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 7,
+        "pd": 5,
+        "fa": 9
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "nudt_sirst",
+      "method_id": "isnet",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.8123600000000001,
+        "pd": 0.9777800000000001,
+        "fa": 6.343,
+        "params_m": 0.966,
+        "flops_g": 30.618
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 5,
+        "pd": 4,
+        "fa": 3
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "nudt_sirst",
+      "method_id": "rdian",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.82419,
+        "pd": 0.98836,
+        "fa": 14.845,
+        "params_m": 0.217,
+        "flops_g": 3.718
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 4,
+        "pd": 2,
+        "fa": 5
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "nudt_sirst",
+      "method_id": "dna_net",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.94192,
+        "pd": 0.99259,
+        "fa": 2.436,
+        "params_m": 4.697,
+        "flops_g": 14.261
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 1,
+        "pd": 1,
+        "fa": 1
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "nudt_sirst",
+      "method_id": "istdu_net",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.91762,
+        "pd": 0.98519,
+        "fa": 3.769,
+        "params_m": 2.752,
+        "flops_g": 7.944
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 2,
+        "pd": 3,
+        "fa": 2
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "nudt_sirst",
+      "method_id": "uiu_net",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.9051699999999999,
+        "pd": 0.98836,
+        "fa": 8.342,
+        "params_m": 50.54,
+        "flops_g": 54.426
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 3,
+        "pd": 2,
+        "fa": 4
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "irstd_1k",
+      "method_id": "top_hat",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.10061999999999999,
+        "pd": 0.7510800000000001,
+        "fa": 1432.003,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 14,
+        "pd": 11,
+        "fa": 17
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "irstd_1k",
+      "method_id": "max_median",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.07003,
+        "pd": 0.65213,
+        "fa": 59.731,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 16,
+        "pd": 16,
+        "fa": 14
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "irstd_1k",
+      "method_id": "rlcm",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.14623,
+        "pd": 0.65658,
+        "fa": 17.949,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 11,
+        "pd": 15,
+        "fa": 8
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "irstd_1k",
+      "method_id": "wslcm",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.00989,
+        "pd": 0.70026,
+        "fa": 15027.084,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 19,
+        "pd": 14,
+        "fa": 19
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "irstd_1k",
+      "method_id": "tllcm",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.05357,
+        "pd": 0.63966,
+        "fa": 4.928,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 17,
+        "pd": 17,
+        "fa": 1
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "irstd_1k",
+      "method_id": "mslcm",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.05346,
+        "pd": 0.5993200000000001,
+        "fa": 5.41,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 18,
+        "pd": 19,
+        "fa": 2
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "irstd_1k",
+      "method_id": "mspcm",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.07332,
+        "pd": 0.6027,
+        "fa": 15.242,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 15,
+        "pd": 18,
+        "fa": 5
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "irstd_1k",
+      "method_id": "ipi",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.27923,
+        "pd": 0.8137399999999999,
+        "fa": 16.183,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 8,
+        "pd": 8,
+        "fa": 6
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "irstd_1k",
+      "method_id": "nram",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.15249000000000001,
+        "pd": 0.7067700000000001,
+        "fa": 16.926,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 10,
+        "pd": 13,
+        "fa": 7
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "irstd_1k",
+      "method_id": "ript",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.14106,
+        "pd": 0.7754800000000001,
+        "fa": 28.31,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 12,
+        "pd": 10,
+        "fa": 10
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "irstd_1k",
+      "method_id": "pstnn",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.24573,
+        "pd": 0.71988,
+        "fa": 35.261,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 9,
+        "pd": 12,
+        "fa": 13
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "irstd_1k",
+      "method_id": "mslstipt",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.11432,
+        "pd": 0.79027,
+        "fa": 1524.004,
+        "params_m": null,
+        "flops_g": null
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 13,
+        "pd": 9,
+        "fa": 18
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "irstd_1k",
+      "method_id": "acm",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.60326,
+        "pd": 0.93266,
+        "fa": 68.494,
+        "params_m": 0.398,
+        "flops_g": 0.402
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 5,
+        "pd": 2,
+        "fa": 15
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "irstd_1k",
+      "method_id": "alcnet",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.5808800000000001,
+        "pd": 0.9292900000000001,
+        "fa": 74.453,
+        "params_m": 0.427,
+        "flops_g": 0.378
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 7,
+        "pd": 3,
+        "fa": 16
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "irstd_1k",
+      "method_id": "isnet",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.61852,
+        "pd": 0.90236,
+        "fa": 31.561,
+        "params_m": 0.966,
+        "flops_g": 30.618
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 4,
+        "pd": 5,
+        "fa": 11
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "irstd_1k",
+      "method_id": "rdian",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.59939,
+        "pd": 0.87205,
+        "fa": 33.307,
+        "params_m": 0.217,
+        "flops_g": 3.718
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 6,
+        "pd": 7,
+        "fa": 12
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "irstd_1k",
+      "method_id": "dna_net",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.65735,
+        "pd": 0.89562,
+        "fa": 12.336,
+        "params_m": 4.697,
+        "flops_g": 14.261
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 1,
+        "pd": 6,
+        "fa": 3
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "irstd_1k",
+      "method_id": "istdu_net",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.6501399999999999,
+        "pd": 0.93939,
+        "fa": 26.437,
+        "params_m": 2.752,
+        "flops_g": 7.944
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 3,
+        "pd": 1,
+        "fa": 9
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    },
+    {
+      "dataset_id": "irstd_1k",
+      "method_id": "uiu_net",
+      "split": "test",
+      "setting": "README benchmark table",
+      "metrics": {
+        "miou": 0.6568999999999999,
+        "pd": 0.9124599999999999,
+        "fa": 13.475,
+        "params_m": 50.54,
+        "flops_g": 54.426
+      },
+      "curves": {},
+      "rankings": {
+        "miou": 2,
+        "pd": 4,
+        "fa": 4
+      },
+      "provenance": {
+        "result_source": "readme_table",
+        "script": "README.md",
+        "config": "",
+        "checkpoint": ""
+      }
+    }
+  ]
+}
