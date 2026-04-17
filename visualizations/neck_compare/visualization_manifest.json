@@ -1,0 +1,21 @@
+{
+  "dataset_name": "IRSTD-1K",
+  "dataset_root": "D:\\Projects\\2026\\istd_benchmark\\BasicIRSTD\\datasets\\Dataset",
+  "checkpoint_root": "D:\\Projects\\2026\\istd_benchmark\\BasicIRSTD\\log\\neck_compare",
+  "seed": 42,
+  "checkpoint_epoch": 400,
+  "sample_ids": [
+    "XDU189",
+    "XDU935",
+    "XDU672",
+    "XDU231",
+    "XDU818",
+    "XDU888"
+  ],
+  "model_names": [
+    "CompareSPP",
+    "CompareFPN",
+    "ComparePANet",
+    "CompareACM"
+  ]
+}

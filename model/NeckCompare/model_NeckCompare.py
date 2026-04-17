@@ -140,8 +140,8 @@ class SPPContextBlock(nn.Module):
 class SPPNeck(nn.Module):
     def __init__(self, encoder_channels, neck_channels):
         super().__init__()
-        c1, c2, c3, c4 = encoder_channels
-        self.lateral1 = ConvBNAct(c1, neck_channels, kernel_size=1, padding=0)
+        c1, c2, c3, c4 = encoder_channels # c1 分辨率最高、c4 语义最强
+        self.lateral1 = ConvBNAct(c1, neck_channels, kernel_size=1, padding=0) # 都用 1x1 ConvBNAct 投影到统一通道数
         self.lateral2 = ConvBNAct(c2, neck_channels, kernel_size=1, padding=0)
         self.lateral3 = ConvBNAct(c3, neck_channels, kernel_size=1, padding=0)
         self.context = SPPContextBlock(c4, neck_channels)
@@ -191,7 +191,7 @@ class FPNNeck(nn.Module):
 
         p3 = self.smooth[2](p3 + resize_to(p4, p3))
         p2 = self.smooth[1](p2 + resize_to(p3, p2))
-        p1 = self.smooth[0](p1 + resize_to(p2, p1))
+        p1 = self.smooth[0](p1 + resize_to(p2, p1)) # tar_bak_ratio 较高
 
         merged = torch.cat(
             [p1, resize_to(p2, p1), resize_to(p3, p1), resize_to(p4, p1)],
@@ -233,7 +233,7 @@ class PANetNeck(nn.Module):
         p3 = self.laterals[2](c3)
         p4 = self.laterals[3](c4)
 
-        p3 = self.top_down[2](p3 + resize_to(p4, p3))
+        p3 = self.top_down[2](p3 + resize_to(p4, p3)) # tar_bak_ratio 较高
         p2 = self.top_down[1](p2 + resize_to(p3, p2))
         p1 = self.top_down[0](p1 + resize_to(p2, p1))
 
